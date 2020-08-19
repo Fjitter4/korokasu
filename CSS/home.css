@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/* CSS Document */
+
+img{
+    display: block;
+}
+
+body {
+    background-color: #aa4444;
+	width: 100%;
+    max-width: 1920px;
+    min-width: 1280px;
+    min-height: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.sidemenu{
+    float: left;
+    color: #ffffff;
+    background-color: #771111;
+    width: 320px;
+    height: 100%;
+}
+
+
+.logobox{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.logobox img{
+    width: 100%;
+}
+
+
+.subtabbox{
+    width: 100%;
+}
+
+
+.subtabbox img{
+    height: 300px;
+    margin: auto;
+}
+
+
+.sidebtn{
+    margin: 30px auto;
+}
+
+
+.sidebtn img{
+    width: 100%;
+}
+
+
+#pagetopbtn{
+    position: fixed;
+    bottom: 30px;
+    left: 50px;
+}
+
+
+#pagetopbtn img{
+    width: 100px;
+}
+
+
+
+.main{
+    background-color: #8e403f;
+    margin-left: 320px;
+    overflow: hidden;
+}
+
+
+.topbox{
+    background-image: url("../IMAGE/topimage.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+
+@keyframes btnscale{
+    0% {
+    transform: none;
+  }
+    100% {
+    transform: scale(1.1);
+  }
+}
+
+.topbox img{
+    position: absolute;
+    margin: auto;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    width: 600px;
+    animation-name: btnscale;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.topbox img:hover{
+    cursor: pointer;
+}
+
+
+.newstab{
+    color: #ffffff;
+    width: 300px;
+    font-size: 40px;
+    background-color: #ff2222;
+    border: solid 5px #553333;
+    border-top-right-radius: 80px;
+}
+
+
+
+
+
+@keyframes ticker {/*アニメーション設定。右から左に流す、を繰り返す*/
+  0% {
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.enewsbox {/*ティッカーを包括している親要素*/
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+
+.enewsbox .enews {/*ティッカー本体*/
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 25s;
+}
+
+.enews .enewslist {/*個別設定*/
+  display: inline-block;
+  padding: 0 50px;
+  font-size: 30px;
+  color: white;
+}
+
+.enewslist span{
+    color: #ff0000;
+    font-weight: bolder;
+}
+ 
+.enewsbox:hover .enews{/*本体にマウスホバーしたらアニメーションを一時停止*/
+  animation-play-state: paused;
+}
+
+
+.eventbox{
+    float: left;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #224411;
+    background-image: url(../IMAGE/bg.png);
+    background-size: 100%;
+}
+
+
+.midasi{
+    text-align: center;
+    font-size: 70px;
+    color: #ffffff;
+}
+
+
+.eventimagebox{
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.eventimagebox img{
+    width: 90%;
+    margin: auto;
+}
+
+
+.screenbox{
+    float: left;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #222266;
+    background-image: url(../IMAGE/bg.png);
+    background-size: 100%;
+}
+
+
+.gameimagebox{
+    float: left;
+    width: 50%;
+    margin-top: 30px;
+}
+
+
+.gameimagebox a{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+
+.gameimagebox img{
+    width: 100%;
+    margin: auto;
+}
+
+
+footer{
+    clear: both;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #ffffff;
+}
+
+
+footer a{
+    color: #ffffff;
+    font-size: 30px;
+}
